@@ -1,0 +1,11 @@
+services:
+  yure:
+    image: ghcr.io/yude/yure-docker:master
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    security_opt:
+      - apparmor=unconfined
+    ports:
+      - "8080:8080"
